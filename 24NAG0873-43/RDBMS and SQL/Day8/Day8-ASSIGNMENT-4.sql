@@ -1,0 +1,17 @@
+/*Assignment 4: Write SQL statements to CREATE a new database and tables that reflect the library schema you designed earlier. 
+Use ALTER statements to modify the table structures and DROP statements to remove a redundant table.*/
+
+use library_system;
+
+DROP TABLE BOOKS;
+
+ALTER TABLE BOOKS
+ADD TITLE1 VARCHAR(30) NOT NULL; -- COLUMN ADDED INTO THE BOOKS TABLE
+
+ALTER TABLE BOOKS
+DROP COLUMN TITLE1; -- DROPPING AS IT ALREADY IN THE TABLE AS TITLE
+
+CREATE TABLE BOOKS2(SELECT * FROM BOOKS);
+-- NOW A DUPLICATE TABLE IS CRATED WITH THE NAME BOOKS2 TO REMOVE IT WE USE DROP COMMAND/STATEMENT
+
+DROP TABLE BOOKS2; -- IT WILL REMOVE THE TABLE AND TABLE STRUCTURE FROM DATABASE
